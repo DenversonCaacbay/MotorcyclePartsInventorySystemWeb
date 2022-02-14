@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="../../assets/logo-dark.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../report">BACK</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="window.print();" href="../report-vendor">PRINT</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </nav><!-- //NAVBAR -->
+  
+  <div class="toTop">
+    <h3>List of Vendors</h3>
+</div>
+
+  <table class="table">
+    <thead style="border-color: #106cfc;">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Customer Id</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let task of tasks">
+        <th scope="row">{{task.id}}</th>
+        <td>{{task.full_name}}</td>
+        <td>{{task.status}}</td>
+        <td>{{task.vendor_id}}</td>
+        <td>{{task.phone}}</td>
+        <td>{{task.email}}</td>
+        <td>@{{task.address}}</td>
+        <button class="btn" id="{{task.id}}" (click)="deleteTask($event)" slot="end"> Delete </button>
+      </tr>
+    </tbody>
+  </table>

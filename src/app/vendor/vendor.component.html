@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="../../assets/logo-dark.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home">ITEMS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../vendor">VENDOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../customer">CUSTOMER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../report">REPORT</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="../login">LOGOUT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav><!-- //NAVBAR -->
+
+  <div class="toTop">
+    <h3>Add Vendor</h3>
+</div>
+
+<form [formGroup]="taskVendor" class="row g-3 form-container">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Full Name</label>
+    <input formControlName="full_name" class="form-control"  placeholder="Enter Full Name">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Status</label>
+    <input formControlName="status" class="form-control" placeholder="Enter Status">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress2" class="form-label"> Vendor Id</label>
+    <input formControlName="vendor_id" class="form-control" placeholder="Enter Vendor Id">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Phone (Mobile)</label>
+    <input formControlName="phone" class="form-control" placeholder="Enter Mobile Phone">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Email</label>
+    <input formControlName="email" class="form-control" placeholder="Enter Email">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress2" class="form-label"> Address</label>
+    <input formControlName="address" class="form-control" placeholder="Enter Address">
+  </div>
+  <div class="col-12">
+    <button (click)="addvendor()" class="btn">Add Vendor</button>
+  </div>
+</form>

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="../../assets/logo-dark.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../home">ITEMS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../vendor">VENDOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../customer">CUSTOMER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../report">REPORT</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="../login">LOGOUT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav><!-- //NAVBAR -->
+
+  <div class="toTop">
+    <h3>Add Items</h3>
+</div>
+
+<form [formGroup]="taskForm" class="row g-3 form-container">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Product Name</label>
+    <input formControlName="product_name" class="form-control" placeholder="Enter Product Name">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Description</label>
+    <input formControlName="description" class="form-control" placeholder="Enter Description">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Price</label>
+    <input formControlName="price" class="form-control" placeholder="Enter item Price">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress2" class="form-label"> Quantity</label>
+    <input formControlName="quantity" class="form-control" placeholder="Enter item Quantity">
+  </div>
+  <div class="col-12">
+    <button (click)="additem()" class="btn">Add Item</button>
+  </div>
+</form>
