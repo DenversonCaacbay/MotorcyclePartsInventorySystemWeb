@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CrudService } from '../crud.service';
+
+import { LoginService } from '../login.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +13,7 @@ export class LoginComponent implements OnInit {
   loginForm:FormGroup
   
   
-  constructor(public router:Router, private FB:FormBuilder, private crudservice:CrudService) {
+  constructor(public router:Router, private FB:FormBuilder,private loginservice:LoginService) {
   }
 
   ngOnInit() {
@@ -25,7 +27,7 @@ export class LoginComponent implements OnInit {
   login(){
     console.log(this.loginForm.value)
     if(this.loginForm.valid){
-      this.crudservice.loginRequest(this.loginForm.value).subscribe((rest:any)=>{
+      this.loginservice.loginRequest(this.loginForm.value).subscribe((rest:any)=>{
         console.log(rest)
         if(rest.data){
           this.router.navigate(['../home'])

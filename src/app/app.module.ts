@@ -15,6 +15,7 @@ import { ReportComponent } from './report/report.component';
 import { ReportItemComponent } from './report-item/report-item.component';
 import { ReportVendorComponent } from './report-vendor/report-vendor.component';
 import { ReportCustomerComponent } from './report-customer/report-customer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ReportCustomerComponent } from './report-customer/report-customer.compo
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

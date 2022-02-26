@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class CrudService {
+export class LoginService {
   private _url: string = environment.url;
   constructor(private http:HttpClient) { } 
   
